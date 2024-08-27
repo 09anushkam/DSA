@@ -10,13 +10,14 @@ using namespace std;
 //     num+=5;
 //     cout<<num<<endl;
 // }
+
 // void doSomething(string s){
 //     s[0]='t';
 //     cout<<s<<endl;
 // }
 
 // pass by reference
-// note - arrays takes value by reference
+// note - arrays takes value by reference only 
 
 void doSomething(int &num){
     cout<<num<<endl;
@@ -25,10 +26,12 @@ void doSomething(int &num){
     num+=5;
     cout<<num<<endl;
 }
+
 void doSomething(string &s){
     s[0]='t';
     cout<<s<<endl;
 }
+
 void doSomething(int arr[],int n){
     arr[0]+=100;
     cout<<"Value inside function : "<<arr[0]<<endl;
