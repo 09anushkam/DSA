@@ -59,7 +59,6 @@ void MultiSet(){
 
     // only a single one erased
     ms.erase(ms.find(1));
-
     // ms.erase(ms.find(1),ms.find(1)+2); //error
 
     // rest all function same as set
@@ -68,10 +67,10 @@ void MultiSet(){
 // Unordered Set
 void UnorderedSet(){
     unordered_set<int>st;
-    // lower_bound and upper_bound function
+    // lower_bound and upper_bound function ....
     // does not works, rest all functions are same
     // as above, it does not stores in any
-    //  particular order is has a better complexity
+    // particular order is has a better complexity
     // than set in most cases,except some when collision happens
 }
 

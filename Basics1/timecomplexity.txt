@@ -1,0 +1,36 @@
+Big-Oh Notation -> O(time taken)
+
+We compute Time Complexity by using this,
+1. calculate in terms of worst case scenario
+2. avoid lower values
+3. avoid constants
+
+BigOh (O) -> upper-bound
+Theta (theta) -> average-bound
+Omega (ohm) -> lower-bound
+
+Examples : 
+for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        //code
+    }
+}
+TC - O(sq(N))
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<i;j++){
+        //code
+    }
+}
+TC - O(sq(N)) or O(N*(N+1)/2)
+
+Space Complexity : Auxiliary space + Input space
+Auxiliary space - Space that you take to solve the problem eg:c=a+b; c is variable that stores some value
+Input space - the space that you take to store the input
+
+Never do anything on the input 
+eg : b=a+b 
+instead do this c=a+b
+
+1sec=approx 10⁸
+

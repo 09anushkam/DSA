@@ -1,22 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// List
+// List-internally DLL
 // push_front()
+// emplace_front()
 void List(){
     list<int>ls;
     ls.push_back(2); // {2}
     ls.emplace_back(4); // {2,4}
 
-    ls.push_front(5); // {5,2,4}
-
-    ls.emplace_front(); // {2,4};
+    ls.push_front(5); // {5,2,4} - cheap
+    ls.emplace_front(); // {2,4}; - cheap
 
     // rest functions same as vector
     // begin,end,rbegin,rend,clear,insert,size,swap
 }
 
-// Deque
+// Deque-similar to list and vector
 void Deque(){
     deque<int>dq;
     dq.push_front(1); // {1}
@@ -35,6 +35,8 @@ void Deque(){
     // begin,end,rbegin,rend,clear,insert,size,swap
 }
 
+// Stack-LIFO
+// All operations - O(1)
 void Stack(){
     stack<int>st;
     st.push(1); // {1}
@@ -49,12 +51,14 @@ void Stack(){
 
     cout<<st.top(); // 3
     cout<<st.size(); // 4
-    cout<<st.empty();
+    cout<<st.empty(); // false
 
     stack<int>st1,st2;
     st1.swap(st2);
 }
 
+// Queue-FIFO
+// rear=back,front=front
 void Queue(){
     queue<int>q;
     q.push(1); // {1}
@@ -74,16 +78,18 @@ void Queue(){
     // size,swap,empty same as stack
 }
 
+// PQ - internally tree data structure
+// push,pop - O(log(n)),top - O(1)
 void PriorityQueue(){
     priority_queue<int>pq;
 
     // Maximum Heap
     pq.push(5); // {5}
-    pq.push(2); // {2,5}
+    pq.push(2); // {5,2}
     pq.push(8); // {8,5,2}
     pq.emplace(10); // {10,8,5,2}
 
-    cout<<pq.top();
+    cout<<pq.top(); // prints 10
 
     pq.pop(); // {8,5,2}
     cout<<pq.top(); //prints 8

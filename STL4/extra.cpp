@@ -3,10 +3,10 @@ using  namespace std;
 
 void Extra(){
 
-    // sort(a,a+n);
-    // sort(v.begin(),v.end());
-    // sort(a+2,a+4);
-    // sort(a,a+n,greater<int>);
+    sort(a,a+n);
+    sort(v.begin(),v.end());
+    sort(a+2,a+4); // ascending order
+    sort(a,a+n,greater<int>); // descending order
 
     pair<int,int>a[]={{1,2},{2,1},{4,1}};
 
