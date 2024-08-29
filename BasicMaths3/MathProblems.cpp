@@ -1,17 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Extracting digits :
+// Extraction of digits :
 // digit=n%10;
 // n=n/10; 
 // repeat above 2 steps till n>0
 
 // Count Digits
-// O(log(n))
+// O(log10(n))
 int countDigits(int n){	
 	int count=0;
 	while(n>0){
-		int lastDigit=n%10;
+		int lastDigit=n%10; // optional line
 		count++;
 		n=n/10;
 	}
@@ -79,6 +79,8 @@ void printAllDivisors(int n){
 void printAllDivisorsBetterApproach(int n){
     vector<int>ls;
     // i<=sqrt(n) or i*i<=n
+    // eg : 6*6<=36 
+    // O(sqrt(n))
     for(int i=1;i<=sqrt(n);i++){
         if(n%i==0){
             ls.push_back(i);
@@ -87,6 +89,7 @@ void printAllDivisorsBetterApproach(int n){
             }
         }
     }
+    // O(no. of factors*log(no. of factors)) = O(n*log(n))
     sort(ls.begin(),ls.end());
     for(auto it:ls) {
         cout<<it<<" ";
@@ -94,6 +97,23 @@ void printAllDivisorsBetterApproach(int n){
     cout<<endl;
 }
 
+// Prime number problem with brute force approach
+// O(n)
+bool primeNumberBruteForce(int n){
+    int count=0;
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            count++;
+        }
+    } cout<<endl;
+    if(count==2){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Optimized approach
 // O(sqrt(n))
 bool primeNumber(int n){
     int count=0;
@@ -120,7 +140,8 @@ int GCD(int n1,int n2){
             gcd=i;
         }
     }
-    // this is better approach but sometimes it is useless because gcd is some smaller no. like 1 as in the case of (11,13)
+    // this is better approach 
+    // but sometimes it is useless because gcd is some smaller no. like 1 as in the case of (11,13)
     // O(min(n1,n2)) - in worst case
     for(int i=min(n1,n2);i>1;i--){
         if(n1%i==0 && n2%i==0){
@@ -130,9 +151,6 @@ int GCD(int n1,int n2){
     }
     return gcd;
 }
-
-
-
 
 int main(){
     cout<<countDigits(2344)<<endl;
@@ -146,4 +164,3 @@ int main(){
     cout<<GCD(9,12);
     return 0;
 }
-

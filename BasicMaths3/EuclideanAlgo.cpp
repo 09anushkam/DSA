@@ -2,6 +2,7 @@
 using namespace std;
 
 // { gcd(a,b) = gcd(a-b,b) where a>b } keep on applying till one of the no. becomes 0
+
 // better approach using % :
 // { gcd(a,b) = gcd(a%b,b) where a>b } keep on applying till one of the no. becomes 0
 

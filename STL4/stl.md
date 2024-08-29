@@ -7,8 +7,8 @@ Functions
 Pair  
 Vector  
 List - List,Deque,Stack,Queue,PQ  
-Set  
-Map  
+Set, Unordered set, Multi set  
+Map, Unordered map, Multi map  
 
 insert in vector is costlier  
 vector is internally singly linked list  
