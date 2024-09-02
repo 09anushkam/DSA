@@ -1,21 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Hashing -> prestoring and fetching
+
 // For hashing of array using array :
 // Earlier O(nq) without hashing {Check whole array for each query(element that we are interested in irrespective of it exists or not)}
-// Later O(q) with hasing using array {precompute the count for each element and directly access the count for each query}
+// Later O(q) with hashing using array {precompute the count for each element and directly access the count for each query}
 
-// [if n>10⁶] then it takes 1s for the code to get executed
-// [if n=10⁸] then it takes 100secs(1.5min) for the code to get executed 
+// [if n=10⁸] then it takes 1s for the code to get executed
+// [if n=10¹⁰] then it takes 100secs(1.5min) for the code to get executed 
 
+// numbers
 // max array size -> 10⁷ (globally)
 // max array size -> 10⁶ (inside main)
 
+// booleans
+// max array size -> 10⁸ (globally)
+// max array size -> 10⁷ (inside main)
+
 // Count of all the elements and it will increase the no. of times they are getting repeated
 // input
-// 5 (n)
+// 5 (n)->size of array
 // 1 3 2 1 3 (arr)
-// 5 (q) (no. of no.s for which u want to check the count)
+// 5 (q)->query (no. of no.s for which u want to check the count)
 // no.s for which u want to check the count
 // 1 
 // 4
