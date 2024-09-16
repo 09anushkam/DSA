@@ -1,4 +1,5 @@
 // Bubble Sort Worst case - O(n²) , best case - O(n) (already ascending order)
+// Opposite of Selection Sort
 // Compare 2 no.s and Push the max to the last by adjacent swaps
 // 13 46 24 52 20 9
 
@@ -45,9 +46,9 @@ void op(int arr[],int n){
 }
 
 void bubbleSort(int arr[],int n){
-    for(int i=n-1;i>=0;i--){ // 0-last index
+    for(int i=n-1;i>=1;i--){ // 0-last index
     int didswap=0;
-        for(int j=0;j<=i-1;j++){  // 1st to updated last index (j<=i-1) -> (j<=n-2) (till 2nd last element. Otherwise if we are going till last element, the last element will compare itself with garbage value as no one is present on it's next position and this will give us run time error)
+        for(int j=0;j<=i-1;j++){  // 0-2nd last index (j<=i-1) -> (j<=n-2) (till 2nd last element. Otherwise if we are going till last element, the last element will compare itself with garbage value as no one is present on it's next position and this will give us run time error)
             if(arr[j]>arr[j+1]){
                 // int temp=arr[j+1];
                 // arr[j+1]=arr[j];
@@ -56,6 +57,7 @@ void bubbleSort(int arr[],int n){
                 didswap=1;
             }
         }
+        // optimization - if already ascending order is present, no swaps will take place at all. Thus, in the 1st iteration only we can check and terminate the loop if it's already sorted.
         if(didswap==0){
             break;
         }

@@ -41,7 +41,7 @@ int main(){
     int arr[n];
 
     ip(arr,n);
-    bubbleSort(arr,n);
+    insertionSort(arr,n);
     op(arr,n);
     return 0;
 }

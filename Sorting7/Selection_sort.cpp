@@ -25,9 +25,9 @@ void op(int arr[],int n){
 }
 
 void selectionSort(int arr[],int n){
-    for(int i=0;i<=n-2;i++){ // 1 to 2nd last
+    for(int i=0;i<=n-2;i++){ // 0 to 2nd last
         int mini=i;
-        for(int j=i;j<=n-1;j++){ // i to last
+        for(int j=i+1;j<=n-1;j++){ // i+1 to last
             if(arr[j]<arr[mini]){
                 mini=j;
             }
