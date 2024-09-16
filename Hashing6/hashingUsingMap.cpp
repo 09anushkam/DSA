@@ -6,9 +6,14 @@
 // map only stores the elements that are required
 // time complexity - O(logn) 
 
-// For unordered map (more preferred because worst case rarely takes place)
-// O(1) avg,best case
-// O(n) worst case
+// Map - storing and fetching - Time complexity - O(logn) for best/worst case
+// unordered map - storing and fetching - Time complexity - O(1) for avg,best case and O(n) for worst case
+// Therefore, unordered map is preferable (because worst case very very rarely takes place)
+// Here, in unordered map, worst case will take place because of internal collisions
+// Division method (k%10) -> collision -> solution : chaining
+// worst case in chaining : 8 -> 18 -> 38 -> 58 -> 78 -> 88 -> 98 (here we end up having single chain thus traversal will take O(n))
+// Folding method
+// Mid-square method
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -16,9 +21,10 @@ using namespace std;
 // For hashing of array using map
 // input
 // 7 (n)
+// all the array inputs
 // 1 2 3 1 3 2 12 
 // 5 (q)
-// all the numbers
+// all the queries
 // 1
 // 2
 // 3
@@ -30,7 +36,8 @@ using namespace std;
 //     cin>>n;
 //     int arr[n];
 //     // take input and precompute
-//     map<int,int>mpp;
+//     // map<int,int>mpp;
+//     unordered_map<int,int>mpp; // preferable
 //     for(int i=0;i<n;i++){
 //         cin>>arr[i];
 //         mpp[arr[i]]++;
@@ -58,7 +65,7 @@ using namespace std;
 //     return 0;
 // }
 
-// For hashing of string using map
+// // For hashing of string using map
 // int main(){
 //     string s;
 //     cin>>s;
@@ -68,9 +75,9 @@ using namespace std;
 //         mpp[s[i]-'a']++;
 //     }
 //     // precompute
-//     // map<int,int>mpp;
+//     // map<char,int>mpp;
 //     // for(int i=0;i<n;i++){
-//     //     mpp[arr[i]]++;
+//     //     mpp[s[i]-'a']++;
 //     // }
 
 //     // iterate in the map
