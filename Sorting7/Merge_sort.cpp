@@ -1,5 +1,8 @@
-// Merge Sort - O(logn)
+// Merge Sort 
+// TC - O(nlogn), SC - O(n)
 // Divide and Merge
+
+// Code used in College
 
 #include<bits/stdc++.h>
 using namespace std;

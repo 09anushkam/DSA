@@ -1,6 +1,7 @@
-// Quick Sort
+// Quick Sort 
+// TC - O(nlogn), SC - O(1)
 // Pick a pivot and place it in it's correct place in the sorted array
-// Smaller on the left,Larger on the right
+// then place Smaller on the left and Larger on the right
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -19,8 +20,8 @@ void op(int arr[],int n){
 
 int partition(int arr[],int low,int high){
     int pivot=arr[low];
-    int i=low;
-    int j=high;
+    int i=low; // leftmost element
+    int j=high; // rightmost element
     while(i<j){
         while(arr[i]<=pivot && i<=high-1){
            i++;
@@ -29,8 +30,8 @@ int partition(int arr[],int low,int high){
         }
         if(i<j) swap(arr[i],arr[j]);
     }
-    swap(arr[low],arr[j]);
-    return j;
+    swap(arr[low],arr[j]); // here, j has crossed i and we are swaping j(which is smaller than pivot) with pivot(leftmost/lowest)
+    return j; // partition index
 }
 
 void quickSort(int arr[],int low,int high){

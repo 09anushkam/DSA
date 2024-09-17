@@ -1,3 +1,9 @@
+// Merge Sort 
+// TC - O(nlogn), SC - O(n)
+// Divide and Merge
+
+// Striver's Code
+
 #include <iostream>
 #include <vector>
 using namespace std;
