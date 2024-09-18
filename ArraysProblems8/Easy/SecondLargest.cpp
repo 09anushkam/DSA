@@ -42,6 +42,22 @@ using namespace std;
 
 // Optimal - O(n)
 
+// Second Smallest
+// void getSmallestByOptimal(int arr[],int n){
+//     int smallest=arr[0],secondSmallest=INT_MAX;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]<smallest){ //logic1
+//             secondSmallest=smallest;
+//             smallest=arr[i];
+//         }
+//         else if(arr[i]!=smallest && arr[i]<secondSmallest){ //logic2
+//             secondSmallest=arr[i];
+//         }
+//     }
+//     cout<<secondSmallest;
+// }
+
+// Second Largest
 // void getLargestByOptimal(int arr[],int n){
 //     int largest=arr[0],secondLargest=INT_MIN;
 //     for(int i=0;i<n;i++){
@@ -63,8 +79,9 @@ using namespace std;
 //     for(int i=0;i<n;i++){
 //         cin>>arr[i];
 //     }
-//     getLargestByBrute(arr,n);
-//     getLargestByBetter(arr,n);
-//     getLargestByOptimal(arr,n);
+//     // getLargestByBrute(arr,n);
+//     // getLargestByBetter(arr,n);
+//     // getSmallestByOptimal(arr,n);
+//     // getLargestByOptimal(arr,n);
 //     return 0;
 // }
