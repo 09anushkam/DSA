@@ -69,7 +69,7 @@ int longestSubarrayWithSumKBetter(vector<int>arr,long long k){
             maxLength=max(maxLength,len); // compare previous and new length
         }
 
-        // Adding sum in the map with the index
+        // If sum is not found in map previously then Updating map with the sum along with index
         if(preSumMap.find(sum)==preSumMap.end()){
             preSumMap[sum]=i; // <sum,i> -> <9,5>
         }
