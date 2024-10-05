@@ -39,7 +39,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int>nextPermutation(vector<int>arr){
+vector<int>nextPermutation(vector<int>& arr){
     
     int n=arr.size();
     int index=-1;
